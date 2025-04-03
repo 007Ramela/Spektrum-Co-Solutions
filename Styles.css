@@ -1,0 +1,140 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #111;
+    color: #00FF00;
+    text-align: center;
+}
+
+header {
+    padding: 40px;
+    background-color: #000;
+    color: #00FF00;
+    border: 3px solid #00FF00;
+    box-shadow: 0 0 10px #00FF00;
+    margin-bottom: 50px;
+    border-radius: 10px;
+}
+
+header .logo {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 15px #00FF00;
+}
+
+header .neon-text {
+    font-size: 1.5rem;
+    text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 20px #00FF00;
+    color: #00FF00;
+}
+
+/* Form Styling */
+#userInput {
+    margin: 50px auto;
+    max-width: 600px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0;
+    border: 1px solid #00FF00;
+    border-radius: 5px;
+    background: #222;
+    color: #00FF00;
+    font-size: 1.2rem;
+    font-family: 'Courier New', Courier, monospace;
+    transition: transform 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #00FFFF;
+    transform: scale(1.05);
+}
+
+button {
+    padding: 15px 30px;
+    background-color: #00FF00;
+    color: #000;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+}
+
+button:hover {
+    transform: translateY(-5px);
+    background-color: #00FFFF;
+}
+
+/* Glitch Effect for Status & Result */
+@keyframes glitch-anim {
+    0% {
+        text-shadow: 1px 1px 3px rgba(0, 255, 0, 0.6), -1px -1px 3px rgba(0, 255, 0, 0.6);
+    }
+    25% {
+        text-shadow: -3px 2px 0 rgba(0, 255, 0, 0.5), 3px -2px 0 rgba(0, 255, 0, 0.7);
+    }
+    50% {
+        text-shadow: 4px -3px 0 rgba(0, 255, 0, 0.6), -4px 3px 0 rgba(0, 255, 0, 0.8);
+    }
+    75% {
+        text-shadow: 2px 2px 5px rgba(0, 255, 0, 0.4), -2px -2px 5px rgba(0, 255, 0, 0.5);
+    }
+    100% {
+        text-shadow: 1px 1px 3px rgba(0, 255, 0, 0.6), -1px -1px 3px rgba(0, 255, 0, 0.6);
+    }
+}
+
+.neon-text {
+    font-size: 2rem;
+    animation: glitch-anim 1.5s infinite alternate-reverse;
+}
+
+/* Loading Spinner */
+#loadingSpinner {
+    margin-top: 20px;
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #00FF00;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Status and Result Styling */
+#status, #result {
+    margin-top: 40px;
+    background: #000;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
+    color: #00FF00;
+}
+
+/* Interactive Prompt Effect */
+input, textarea, button {
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus, button:hover {
+    background-color: #111;
+    border-color: #00FFFF;
+    box-shadow: 0 0 10px #00FFFF;
+    transform: scale(1.05);
+}

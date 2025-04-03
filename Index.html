@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPEKTRUM AI Software Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">AI <span class="neon-text">Code</span> Generator</div>
+        <p class="neon-text">Generate your desired Software in a matter of Seconds</p>
+    </header>
+
+    <!-- Software Generation Form -->
+    <section id="userInput">
+        <form id="softwareForm">
+            <label for="projectName" class="neon-text">Software Name:</label>
+            <input type="text" id="projectName" class="input-field" required>
+
+            <label for="projectDescription" class="neon-text">Software Description:</label>
+            <textarea id="projectDescription" class="input-field" placeholder="Describe your software..." required></textarea>
+
+            <button type="submit" class="neon-button">Generate and Deploy</button>
+        </form>
+    </section>
+
+    <!-- Status Section -->
+    <section id="status" style="display:none;">
+        <h2 class="neon-text">Status</h2>
+        <p id="statusMessage" class="neon-text">Generating your project...</p>
+        <div id="loadingSpinner"></div>
+    </section>
+
+    <!-- Result Section -->
+    <section id="result" style="display:none;">
+        <h2 class="neon-text">Your Project is Live!</h2>
+        <p id="liveUrl" class="neon-text"></p>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
